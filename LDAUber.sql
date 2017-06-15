@@ -5,10 +5,10 @@ fact_trips.id as "Trip ID",
 fact_trips.duration as "Duration",
 fact_trips.start_date as "Start Date",
 start_station.station_name as "Start Station",
-start_station.id as "Start Terminal",
+start_station.id as "Start Terminal",/*tables provided say this should be str, but ids int*/
 fact_trips.end_date as "End Date",
 end_station.station_name as "End Station",
-end_station.id as "End Terminal",
+end_station.id as "End Terminal", /*tables provided say this should be str, but ids int*/
 fact_trips.bike_id as "Bike #",
 dim_entity.entity_type as "Subscriber Type",
 dim_entity_zip.zip_code as "Zip Code"
