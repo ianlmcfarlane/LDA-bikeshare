@@ -1,3 +1,5 @@
+/*MySQL*/
+
 select
 fact_trips.id as "Trip ID",
 fact_trips.duration as "Duration",
@@ -19,7 +21,4 @@ join dim_stations end_station on end_station.id = fact_trips.end_station_id
 join dim_entity on dim_entity.id = fact_trips.entity_id
 left join dim_entity_zip on dim_entity_zip.entity_id = fact_trips.entity_id
 
-where start_date between 
-
-check end dates
-think about terminal id vs name
+where fact_trips.start_date between str_to_date('03/01/14', '%m/%d/%Y') and str_to_date('08/31/14', '%m/%d/%Y')
